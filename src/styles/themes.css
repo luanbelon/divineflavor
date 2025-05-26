@@ -1,0 +1,52 @@
+
+/* General Demo Page Container */
+.demo-page-container {
+  /* Base styles for all demo pages, can be overridden by specific themes */
+}
+
+/* Hero Section Enhancements (Generic for Demos) */
+.hero-section {
+  padding: var(--space-xxxxl) 0; /* More padding */
+  min-height: 65vh; /* Taller hero */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative; /* For overlays or images */
+  color: var(--color-white); /* Default for image backgrounds */
+}
+
+.hero-section::before { /* Optional overlay for better text readability on images */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3); /* Adjust as needed */
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  color: var(--color-white); /* Ensure titles are white on dark/image backgrounds */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Subtle shadow for readability */
+}
+
+.hero-subtitle {
+  color: var(--color-light-gray); /* Lighter subtitle for contrast */
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  max-width: 750px; /* Wider subtitle */
+  line-height: 1.8;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.hero-section .btn {
+  padding: var(--space-md) var(--space-xl); /* Larger CTA button */
+  font-size: 1.1rem;
+}
